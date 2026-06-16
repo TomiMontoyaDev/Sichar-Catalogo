@@ -17,11 +17,19 @@
       <img src="logo.png" alt="DecorTiles Logo" class="nav-logo-img" />
       <div class="nav-logo">Decor<span>tiles</span></div>
       <ul class="nav-links">
-        <li><a href="#paredes">Paredes</a></li>
-        <li><a href="#porcelanatos">Porcelanatos</a></li>
-        <li><a href="#mallas">Mallas</a></li>
-        <li><a href="#pisos">Pisos 45×45</a></li>
-        <li><a href="#sanitarios">Sanitarios</a></li>
+        <li><a href="#catalogo" onclick="navFilter('paredes')">Paredes</a></li>
+        <li>
+          <a href="#catalogo" onclick="navFilter('porcelanatos')"
+            >Porcelanatos</a
+          >
+        </li>
+        <li><a href="#catalogo" onclick="navFilter('mallas')">Mallas</a></li>
+        <li>
+          <a href="#catalogo" onclick="navFilter('pisos')">Pisos 45×45</a>
+        </li>
+        <li>
+          <a href="#catalogo" onclick="navFilter('sanitarios')">Sanitarios</a>
+        </li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
       <div class="nav-search">
@@ -33,7 +41,67 @@
           oninput="filterProducts()"
         />
       </div>
+      <button
+        class="nav-hamburger"
+        id="navHamburger"
+        aria-label="Menú"
+        onclick="toggleDrawer()"
+      >
+        <span></span><span></span><span></span>
+      </button>
     </nav>
+
+    <!-- MOBILE DRAWER -->
+    <div class="nav-drawer" id="navDrawer">
+      <a
+        href="#catalogo"
+        onclick="
+          navFilter('paredes');
+          closeDrawer();
+        "
+        >Paredes</a
+      >
+      <a
+        href="#catalogo"
+        onclick="
+          navFilter('porcelanatos');
+          closeDrawer();
+        "
+        >Porcelanatos</a
+      >
+      <a
+        href="#catalogo"
+        onclick="
+          navFilter('mallas');
+          closeDrawer();
+        "
+        >Mallas</a
+      >
+      <a
+        href="#catalogo"
+        onclick="
+          navFilter('pisos');
+          closeDrawer();
+        "
+        >Pisos 45×45</a
+      >
+      <a
+        href="#catalogo"
+        onclick="
+          navFilter('sanitarios');
+          closeDrawer();
+        "
+        >Sanitarios</a
+      >
+      <a href="#contacto" onclick="closeDrawer()">Contacto</a>
+      <div class="drawer-search">
+        <input
+          type="text"
+          placeholder="Buscar producto..."
+          oninput="mobileSearch(this.value)"
+        />
+      </div>
+    </div>
 
     <!-- HERO -->
     <section class="hero" id="hero">
@@ -73,7 +141,7 @@
     </section>
 
     <!-- FEATURED WOOD GEOMETRIC -->
-    <section style="padding: 100px 60px 0" id="catalogo">
+    <section class="featured-wrapper" id="catalogo">
       <div class="featured-section" style="padding: 0; margin: 0">
         <div class="featured-text anim-fade-left">
           <div class="featured-eyebrow">Colección Especial 2026</div>
@@ -175,15 +243,15 @@
 
       <!-- ALL PRODUCTS GRID (filterable) -->
       <div class="product-grid" id="allProductsGrid">
-        <!-- =================== PAREDES 30x60 =================== -->
+        <!-- =================== PORCELANATOS =================== -->
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
-          data-name="pared larice greige"
+          data-category="porcelanatos"
+          data-name="porcelanato black gold brillante"
           onclick="
             openModal(
-              'Pared Larice Greige',
-              'Paredes 30×60',
+              'porcelanato black gold brillante',
+              'Porcelanato 60×120',
               'Primera entrega/1.png',
             )
           "
@@ -192,26 +260,26 @@
             <img
               class="product-img"
               src="Primera entrega/1.png"
-              alt="Pared Larice Greige"
+              alt="Porcelanato Black gold brillante"
               loading="lazy"
             />
             <div class="product-overlay"></div>
             <div class="product-shine"></div>
           </div>
           <div class="product-info">
-            <div class="product-name">Pared Larice Greige</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-name">Porcelanato Black gold brillante</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
-          data-name="pared brick ondas plata glossy"
+          data-category="porcelanatos"
+          data-name="Porcelanato Labeo Chevron Satin"
           onclick="
             openModal(
-              'Pared Brick Ondas Plata Glossy',
-              'Paredes 30×60',
+              'Porcelanato Labeo Chevron Satin',
+              'Porcelanato 60×120',
               'Primera entrega/2.png',
             )
           "
@@ -220,27 +288,27 @@
             <img
               class="product-img"
               src="Primera entrega/2.png"
-              alt="Pared Brick Ondas Plata Glossy"
+              alt="Porcelanato Labeo Chevron Satin"
               loading="lazy"
             />
             <div class="product-overlay"></div>
             <div class="product-shine"></div>
           </div>
           <div class="product-info">
-            <div class="product-name">Pared Brick Ondas Plata Glossy</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-name">Porcelanato Labeo Chevron Satin</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <div class="product-tag">Glossy</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
-          data-name="pared dalia silver"
+          data-category="porcelanatos"
+          data-name="Porcelanato Black Empire"
           onclick="
             openModal(
-              'Pared Dalia Silver',
-              'Paredes 30×60',
+              'Porcelanato Black Empire',
+              'Porcelanato 60×120',
               'Primera entrega/3.png',
             )
           "
@@ -249,26 +317,26 @@
             <img
               class="product-img"
               src="Primera entrega/3.png"
-              alt="Pared Dalia Silver"
+              alt="Porcelanato Black Empire"
               loading="lazy"
             />
             <div class="product-overlay"></div>
             <div class="product-shine"></div>
           </div>
           <div class="product-info">
-            <div class="product-name">Pared Dalia Silver</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-name">Porcelanato Black Empire</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
-          data-name="pared bahia new white"
+          data-category="porcelanatos"
+          data-name="Porcelanato Essence Blue Matt"
           onclick="
             openModal(
-              'Pared Bahia New White',
-              'Paredes 30×60',
+              'Porcelanato Essence Blue Matt',
+              'Porcelanato 60×120',
               'Primera entrega/4.png',
             )
           "
@@ -277,26 +345,26 @@
             <img
               class="product-img"
               src="Primera entrega/4.png"
-              alt="Pared Bahia New White"
+              alt="Porcelanato Essence Blue Matt"
               loading="lazy"
             />
             <div class="product-overlay"></div>
             <div class="product-shine"></div>
           </div>
           <div class="product-info">
-            <div class="product-name">Pared Bahia New White</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-name">Porcelanato Essence Blue Matt</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
-          data-name="pared larice gris"
+          data-category="porcelanatos"
+          data-name="Porcelanato SM002LT Rustic Mate"
           onclick="
             openModal(
-              'Pared Larice Gris',
-              'Paredes 30×60',
+              'Porcelanato SM002LT Rustic Mate',
+              'Porcelanato 60×120',
               'Primera entrega/5.png',
             )
           "
@@ -305,26 +373,26 @@
             <img
               class="product-img"
               src="Primera entrega/5.png"
-              alt="Pared Larice Gris"
+              alt="Porcelanato SM002LT Rustic Mate"
               loading="lazy"
             />
             <div class="product-overlay"></div>
             <div class="product-shine"></div>
           </div>
           <div class="product-info">
-            <div class="product-name">Pared Larice Gris</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-name">Porcelanato SM002LT Rustic Mate</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
-          data-name="pared brick blanco brillo"
+          data-category="porcelanatos"
+          data-name="Porcelanato Delton Black HG"
           onclick="
             openModal(
-              'Pared Brick Blanco Brillo',
-              'Paredes 30×60',
+              'Porcelanato Delton Black HG',
+              'Porcelanato 60×120',
               'Primera entrega/6.png',
             )
           "
@@ -333,27 +401,27 @@
             <img
               class="product-img"
               src="Primera entrega/6.png"
-              alt="Pared Brick Blanco Brillo"
+              alt="Porcelanato Delton Black HG"
               loading="lazy"
             />
             <div class="product-overlay"></div>
             <div class="product-shine"></div>
           </div>
           <div class="product-info">
-            <div class="product-name">Pared Brick Blanco Brillo</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-name">Porcelanato Delton Black HG</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <div class="product-tag">Brillo</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
-          data-name="pared treviso brick white"
+          data-category="porcelanatos"
+          data-name="Porcelanato Narciso Aqua HG"
           onclick="
             openModal(
-              'Pared Treviso Brick White',
-              'Paredes 30×60',
+              'Porcelanato Narciso Aqua HG',
+              'Porcelanato 60×120',
               'Primera entrega/7.png',
             )
           "
@@ -362,26 +430,26 @@
             <img
               class="product-img"
               src="Primera entrega/7.png"
-              alt="Pared Treviso Brick White"
+              alt="Porcelanato Narciso Aqua HG"
               loading="lazy"
             />
             <div class="product-overlay"></div>
             <div class="product-shine"></div>
           </div>
           <div class="product-info">
-            <div class="product-name">Pared Treviso Brick White</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-name">Porcelanato Narciso Aqua HG</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
-          data-name="pared wallconcret plata"
+          data-category="porcelanatos"
+          data-name="Porcelanato Moonlite Carving Mate"
           onclick="
             openModal(
-              'Pared Wallconcret Plata',
-              'Paredes 30×60',
+              'Porcelanato Moonlite Carving Mate',
+              'Porcelanato 60×120',
               'Primera entrega/8.png',
             )
           "
@@ -390,26 +458,26 @@
             <img
               class="product-img"
               src="Primera entrega/8.png"
-              alt="Pared Wallconcret Plata"
+              alt="Porcelanato Moonlite Carving Mate"
               loading="lazy"
             />
             <div class="product-overlay"></div>
             <div class="product-shine"></div>
           </div>
           <div class="product-info">
-            <div class="product-name">Pared Wallconcret Plata</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-name">Porcelanato Moonlite Carving Mate</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
-          data-name="pared matt punch"
+          data-category="porcelanatos"
+          data-name="Porcelanato Venzo Natural HG"
           onclick="
             openModal(
-              'Pared Matt Punch',
-              'Paredes 30×60',
+              'Porcelanato Venzo Natural HG',
+              'Porcelanato 60×120',
               'Primera entrega/9.png',
             )
           "
@@ -418,27 +486,27 @@
             <img
               class="product-img"
               src="Primera entrega/9.png"
-              alt="Pared Matt Punch"
+              alt="Porcelanato Venzo Natural HG"
               loading="lazy"
             />
             <div class="product-overlay"></div>
             <div class="product-shine"></div>
           </div>
           <div class="product-info">
-            <div class="product-name">Pared Matt Punch</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-name">Porcelanato Venzo Natural HG</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <div class="product-tag">Mate</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
-          data-name="pared roma beige 285"
+          data-category="porcelanatos"
+          data-name="Porcelanato Indigo White HG"
           onclick="
             openModal(
-              'Pared Roma Beige 285',
-              'Paredes 30×60',
+              'Porcelanato Indigo White HG',
+              'Porcelanato 60×120',
               'Primera entrega/10.png',
             )
           "
@@ -447,26 +515,26 @@
             <img
               class="product-img"
               src="Primera entrega/10.png"
-              alt="Pared Roma Beige 285"
+              alt="Porcelanato Indigo White HG"
               loading="lazy"
             />
             <div class="product-overlay"></div>
             <div class="product-shine"></div>
           </div>
           <div class="product-info">
-            <div class="product-name">Pared Roma Beige 285</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-name">Porcelanato Indigo White HG</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
-          data-name="pared vintage azul"
+          data-category="porcelanatos"
+          data-name="Porcelanato Whiter Gold"
           onclick="
             openModal(
-              'Pared Vintage Azul',
-              'Paredes 30×60',
+              'Porcelanato Whiter Gold',
+              'Porcelanato 60×120',
               'Primera entrega/11.png',
             )
           "
@@ -475,26 +543,26 @@
             <img
               class="product-img"
               src="Primera entrega/11.png"
-              alt="Pared Vintage Azul"
+              alt="Porcelanato Whiter Gold"
               loading="lazy"
             />
             <div class="product-overlay"></div>
             <div class="product-shine"></div>
           </div>
           <div class="product-info">
-            <div class="product-name">Pared Vintage Azul</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-name">Porcelanato Whiter Gold</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared marmol venato"
           onclick="
             openModal(
               'Pared Marmol Venato',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/12.png',
             )
           "
@@ -511,18 +579,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Marmol Venato</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
-          data-name="pared roma blanca 286"
+          data-category="porcelanatos"
+          data-name="Porcelanato Cimeelio Red HG"
           onclick="
             openModal(
-              'Pared Roma Blanca 286',
-              'Paredes 30×60',
+              'Porcelanato Cimeelio Red HG',
+              'Porcelanato 60×120',
               'Primera entrega/13.png',
             )
           "
@@ -531,26 +599,26 @@
             <img
               class="product-img"
               src="Primera entrega/13.png"
-              alt="Pared Roma Blanca 286"
+              alt="Porcelanato Cimeelio Red HG"
               loading="lazy"
             />
             <div class="product-overlay"></div>
             <div class="product-shine"></div>
           </div>
           <div class="product-info">
-            <div class="product-name">Pared Roma Blanca 286</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-name">Porcelanato Cimeelio Red HG</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared 1475-d glossy"
           onclick="
             openModal(
               'Pared 1475-D Glossy',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/14.png',
             )
           "
@@ -567,19 +635,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared 1475-D Glossy</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <div class="product-tag">Glossy</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared ondas gris mate"
           onclick="
             openModal(
               'Pared Ondas Gris Mate',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/15.png',
             )
           "
@@ -596,19 +664,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Ondas Gris Mate</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <div class="product-tag">Mate</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared chennai 303"
           onclick="
             openModal(
               'Pared Chennai 303',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/16.png',
             )
           "
@@ -625,18 +693,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Chennai 303</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared linea texturizada"
           onclick="
             openModal(
               'Pared Linea Texturizada',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/17.png',
             )
           "
@@ -653,18 +721,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Linea Texturizada</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared dehradun 06"
           onclick="
             openModal(
               'Pared Dehradun 06',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/18.png',
             )
           "
@@ -681,18 +749,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Dehradun 06</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared bambu gris"
           onclick="
             openModal(
               'Pared Bambu Gris',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/19.png',
             )
           "
@@ -709,18 +777,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Bambu Gris</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared calacata gris"
           onclick="
             openModal(
               'Pared Calacata Gris',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/20.png',
             )
           "
@@ -737,18 +805,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Calacata Gris</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
-          data-name="pared gujarat 303"
+          data-category="porcelanatos"
+          data-name="Porcelanato Cloud White Matt"
           onclick="
             openModal(
-              'Pared Gujarat 303',
-              'Paredes 30×60',
+              'Porcelanato Cloud White Matt',
+              'Porcelanato 60×120',
               'Primera entrega/21.png',
             )
           "
@@ -757,26 +825,26 @@
             <img
               class="product-img"
               src="Primera entrega/21.png"
-              alt="Pared Gujarat 303"
+              alt="Porcelanato Cloud White Matt"
               loading="lazy"
             />
             <div class="product-overlay"></div>
             <div class="product-shine"></div>
           </div>
           <div class="product-info">
-            <div class="product-name">Pared Gujarat 303</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-name">Porcelanato Cloud White Matt</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared diamante imperial"
           onclick="
             openModal(
               'Pared Diamante Imperial',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/22.png',
             )
           "
@@ -793,18 +861,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Diamante Imperial</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared hexágono mármol blanco"
           onclick="
             openModal(
               'Pared Hexágono Mármol Blanco',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/23.png',
             )
           "
@@ -821,18 +889,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Hexágono Mármol Blanco</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared mármol gris veteado"
           onclick="
             openModal(
               'Pared Mármol Gris Veteado',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/24.png',
             )
           "
@@ -849,18 +917,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Mármol Gris Veteado</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared calacata cafe"
           onclick="
             openModal(
               'Pared Calacata Cafe',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/25.png',
             )
           "
@@ -877,18 +945,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Calacata Cafe</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared prisma blanco"
           onclick="
             openModal(
               'Pared Prisma Blanco',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/26.png',
             )
           "
@@ -905,18 +973,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Prisma Blanco</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared stone mix beige"
           onclick="
             openModal(
               'Pared Stone Mix Beige',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/27.png',
             )
           "
@@ -933,18 +1001,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Stone Mix Beige</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="paredes"
+          data-category="porcelanatos"
           data-name="pared striped grey"
           onclick="
             openModal(
               'Pared Striped Grey',
-              'Paredes 30×60',
+              'Porcelanato 60×120',
               'Primera entrega/28.png',
             )
           "
@@ -961,20 +1029,20 @@
           </div>
           <div class="product-info">
             <div class="product-name">Pared Striped Grey</div>
-            <div class="product-collection">Paredes 30×60</div>
+            <div class="product-collection">Porcelanato 60×120</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
 
-        <!-- =================== PORCELANATO 60x120 =================== -->
+        <!-- =================== PAREDES =================== -->
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso armania black"
           onclick="
             openModal(
               'Piso Armania Black',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/1.png',
             )
           "
@@ -991,18 +1059,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Armania Black</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso artize black hg"
           onclick="
             openModal(
               'Piso Artize Black HG',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/2.png',
             )
           "
@@ -1019,19 +1087,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Artize Black HG</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">HG</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso charm black hg"
           onclick="
             openModal(
               'Piso Charm Black HG',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/3.png',
             )
           "
@@ -1048,19 +1116,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Charm Black HG</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">HG</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso cimeelio red hg"
           onclick="
             openModal(
               'Piso Cimeelio Red HG',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/4.png',
             )
           "
@@ -1077,19 +1145,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Cimeelio Red HG</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">HG</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso delton black hg"
           onclick="
             openModal(
               'Piso Delton Black HG',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/5.png',
             )
           "
@@ -1106,19 +1174,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Delton Black HG</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">HG</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso narciso aqua hg"
           onclick="
             openModal(
               'Piso Narciso Aqua HG',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/6.png',
             )
           "
@@ -1135,19 +1203,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Narciso Aqua HG</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">HG</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso cloud white hg"
           onclick="
             openModal(
               'Piso Cloud White HG',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/7.png',
             )
           "
@@ -1164,19 +1232,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Cloud White HG</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">HG</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso venzo natural hg"
           onclick="
             openModal(
               'Piso Venzo Natural HG',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/8.png',
             )
           "
@@ -1193,19 +1261,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Venzo Natural HG</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">HG</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso pietra nobel nero hg"
           onclick="
             openModal(
               'Piso Pietra Nobel Nero HG',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/9.png',
             )
           "
@@ -1222,19 +1290,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Pietra Nobel Nero HG</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">HG</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso essence blue matt"
           onclick="
             openModal(
               'Piso Essence Blue Matt',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/10.png',
             )
           "
@@ -1251,19 +1319,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Essence Blue Matt</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">Mate</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso burkina gold"
           onclick="
             openModal(
               'Piso Burkina Gold',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/11.png',
             )
           "
@@ -1280,18 +1348,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Burkina Gold</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso ana black"
           onclick="
             openModal(
               'Piso Ana Black',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/12.png',
             )
           "
@@ -1308,18 +1376,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Ana Black</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso empirial white carving mate"
           onclick="
             openModal(
               'Piso Empirial White Carving Mate',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/13.png',
             )
           "
@@ -1336,19 +1404,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Empirial White Carving Mate</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">Carving</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso jal white carving mate"
           onclick="
             openModal(
               'Piso Jal White Carving Mate',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/14.png',
             )
           "
@@ -1365,19 +1433,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Jal White Carving Mate</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">Carving</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso black gold brillante"
           onclick="
             openModal(
               'Piso Black Gold Brillante',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/15.png',
             )
           "
@@ -1394,19 +1462,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Black Gold Brillante</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">Brillante</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso onix gray"
           onclick="
             openModal(
               'Piso Onix Gray',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/16.png',
             )
           "
@@ -1423,18 +1491,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Onix Gray</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso indigo white hg"
           onclick="
             openModal(
               'Piso Indigo White HG',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/17.png',
             )
           "
@@ -1451,19 +1519,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Indigo White HG</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">HG</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso moonlite carving mate"
           onclick="
             openModal(
               'Piso Moonlite Carving Mate',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/18.png',
             )
           "
@@ -1480,19 +1548,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Moonlite Carving Mate</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">Carving</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso black empire"
           onclick="
             openModal(
               'Piso Black Empire',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/19.png',
             )
           "
@@ -1509,18 +1577,18 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Black Empire</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso cloud white matt"
           onclick="
             openModal(
               'Piso Cloud White Matt',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/20.png',
             )
           "
@@ -1537,19 +1605,19 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Cloud White Matt</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <div class="product-tag">Mate</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
         <div
           class="product-card anim-fade-up"
-          data-category="porcelanatos"
+          data-category="paredes"
           data-name="piso geométrico"
           onclick="
             openModal(
               'Piso Geométrico',
-              'Porcelanato 60×120',
+              'Paredes 30×60',
               'Segunda entrega/21.png',
             )
           "
@@ -1566,7 +1634,7 @@
           </div>
           <div class="product-info">
             <div class="product-name">Piso Geométrico</div>
-            <div class="product-collection">Porcelanato 60×120</div>
+            <div class="product-collection">Paredes 30×60</div>
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
@@ -2618,7 +2686,7 @@
           >
         </div>
         <div class="footer-col">
-          <h4>Contacto</h4>
+          <h4>Email Contacto</h4>
           <a href="mailto:contacto@decorcolombiatiles.com"
             >contacto@<br />decorcolombiatiles.com</a
           >
@@ -2628,6 +2696,15 @@
         <span class="footer-copy"
           >© 2026 Decortiles Cerámica S.A.S. — Todos los derechos
           reservados</span
+        >
+        <span class="footer-copy"
+          >© 2026 Designed By
+          <a
+            href="https://www.instagram.com/tomi._.montoya/?hl=es-la"
+            target="_blank"
+            class="footer-link"
+            >Tomas Montoya</a
+          ></span
         >
         <div class="footer-gold-line"></div>
         <span class="footer-copy">Colección 2026</span>
@@ -2831,12 +2908,53 @@
           observer.observe(card);
         });
 
+      // ===== NAV FILTER (desde navbar) =====
+      function navFilter(cat) {
+        // Buscar el botón correspondiente y activar el filtro
+        const btn = Array.from(document.querySelectorAll(".filter-btn")).find(
+          (b) =>
+            b.getAttribute("onclick") &&
+            b.getAttribute("onclick").includes("'" + cat + "'"),
+        );
+        if (btn) setFilter(cat, btn);
+
+        // Scroll suave a la sección del catálogo (filter-bar)
+        const filterBar = document.querySelector(".filter-bar");
+        if (filterBar) {
+          setTimeout(() => {
+            const offset =
+              filterBar.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({ top: offset, behavior: "smooth" });
+          }, 50);
+        }
+      }
+
       // Legacy woodImg support
       const woodImgEl = document.getElementById("woodImg");
       if (woodImgEl) {
         woodImgEl.style.backgroundImage = "url('Primera entrega/29.png')";
         woodImgEl.style.backgroundSize = "cover";
         woodImgEl.style.backgroundPosition = "center";
+      }
+      // ===== MOBILE DRAWER =====
+      function toggleDrawer() {
+        const btn = document.getElementById("navHamburger");
+        const drawer = document.getElementById("navDrawer");
+        const isOpen = drawer.classList.toggle("open");
+        btn.classList.toggle("open", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      }
+      function closeDrawer() {
+        document.getElementById("navDrawer").classList.remove("open");
+        document.getElementById("navHamburger").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+      function mobileSearch(val) {
+        const mainInput = document.getElementById("searchInput");
+        if (mainInput) {
+          mainInput.value = val;
+          filterProducts();
+        }
       }
     </script>
   </body>
