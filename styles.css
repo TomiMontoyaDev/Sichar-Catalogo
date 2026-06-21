@@ -564,6 +564,9 @@ nav {
 #sanitariosGrid {
   grid-template-columns: repeat(4, 1fr);
 }
+#lavamanosGrid {
+  grid-template-columns: repeat(4, 1fr);
+}
 .product-card {
   background: var(--dark2);
   position: relative;
@@ -1251,6 +1254,9 @@ p:hover {
   #sanitariosGrid {
     grid-template-columns: repeat(4, 1fr);
   }
+  #lavamanosGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -1307,17 +1313,52 @@ p:hover {
     display: none;
   }
 
-  /* Featured section — inline padding override */
+  /* Featured section: en mobile se ve como un product-card normal,
+     pero se mantiene como destacado (primero en el catálogo) */
   .featured-section {
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     min-height: auto;
     padding: 0 !important;
-  }
-  .featured-text {
-    padding: 48px 28px;
+    margin: 0 20px;
+    background: var(--dark2);
   }
   .featured-img {
-    min-height: 280px;
+    order: 1;
+    min-height: 0;
+    aspect-ratio: 3/4;
+  }
+  .featured-text {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 20px 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .featured-eyebrow {
+    order: 2;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin: 6px 0 0;
+    font-weight: 500;
+  }
+  .featured-title {
+    order: 1;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    line-height: 1.3;
+  }
+  .featured-title em {
+    display: inline;
+  }
+  .featured-desc,
+  .featured-divider,
+  .featured-specs {
+    display: none;
   }
 
   /* Section headers */
@@ -1349,6 +1390,20 @@ p:hover {
   }
   #sanitariosGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  #lavamanosGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Sanitarios y Lavamanos: fotos completas en mobile, sin recorte */
+  #sanitariosGrid .product-img-wrap,
+  #lavamanosGrid .product-img-wrap {
+    aspect-ratio: 4 / 3;
+    background: var(--dark3);
+  }
+  #sanitariosGrid .product-img,
+  #lavamanosGrid .product-img {
+    object-fit: contain;
   }
 
   /* CTA Banner */
@@ -1447,6 +1502,9 @@ p:hover {
   #sanitariosGrid {
     grid-template-columns: repeat(1, 1fr);
   }
+  #lavamanosGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .product-img-wrap {
     aspect-ratio: 4/3;
   }
@@ -1466,12 +1524,18 @@ p:hover {
     flex-shrink: 0;
   }
 
-  /* Featured */
+  /* Featured: mismo tratamiento de product-card en mobile chico */
+  .featured-section {
+    margin: 0 14px;
+  }
+  .featured-img {
+    aspect-ratio: 4/3;
+  }
   .featured-text {
-    padding: 36px 20px;
+    padding: 18px 20px 22px;
   }
   .featured-title {
-    font-size: 36px;
+    font-size: 13px;
   }
 
   /* CTA + Sanitarios */

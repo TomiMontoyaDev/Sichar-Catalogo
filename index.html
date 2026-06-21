@@ -69,6 +69,9 @@
         <li>
           <a href="#catalogo" onclick="navFilter('sanitarios')">Sanitarios</a>
         </li>
+        <li>
+          <a href="#catalogo" onclick="navFilter('lavamanos')">Lavamanos</a>
+        </li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
       <div class="nav-search">
@@ -123,6 +126,14 @@
           closeDrawer();
         "
         >Sanitarios</a
+      >
+      <a
+        href="#catalogo"
+        onclick="
+          navFilter('lavamanos');
+          closeDrawer();
+        "
+        >Lavamanos</a
       >
       <a href="#contacto" onclick="closeDrawer()">Contacto</a>
       <div class="drawer-search">
@@ -266,6 +277,9 @@
         </button>
         <button class="filter-btn" onclick="setFilter('sanitarios', this)">
           Sanitarios
+        </button>
+        <button class="filter-btn" onclick="setFilter('lavamanos', this)">
+          Lavamanos
         </button>
       </div>
 
@@ -1788,6 +1802,110 @@
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
+        <!-- PRODUCTO 30 PORCELANATOS -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="porcelanatos"
+          data-name="Porcelanato Ecuador"
+          onclick="
+            openModal(
+              'Porcelanato Ecuador',
+              'Porcelanato 60×120',
+              'Primera entrega/31.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Primera entrega/31.jpeg"
+              alt="Porcelanato Ecuador"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Porcelanato Ecuador</div>
+            <div class="product-collection">Porcelanato 60×120</div>
+            <!-- EDITABLE: datos de caja (m2 / kg / piezas) -->
+            <div class="box-specs">
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="18" height="18" rx="1" />
+                  <path d="M3 12h18M12 3v18" /></svg
+                ><span>1.44 m² x caja</span></span
+              >
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <rect x="2" y="9" width="3" height="6" />
+                  <rect x="19" y="9" width="3" height="6" />
+                  <line x1="5" y1="12" x2="19" y2="12" /></svg
+                ><span>27 kg x caja</span></span
+              >
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
+                  <path d="M3 7v10l9 4 9-4V7" />
+                  <path d="M12 11v10" /></svg
+                ><span>2 piezas x caja</span></span
+              >
+            </div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 31 PORCELANATOS -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="porcelanatos"
+          data-name="Porcelanato Armania H.G"
+          onclick="
+            openModal(
+              'Porcelanato Armania H.G',
+              'Porcelanato 60×120',
+              'Primera entrega/30.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Primera entrega/30.jpeg"
+              alt="Porcelanato Armania H.G"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Porcelanato Armania H.G</div>
+            <div class="product-collection">Porcelanato 60×120</div>
+            <!-- EDITABLE: datos de caja (m2 / kg / piezas) -->
+            <div class="box-specs">
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="18" height="18" rx="1" />
+                  <path d="M3 12h18M12 3v18" /></svg
+                ><span>1.44 m² x caja</span></span
+              >
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <rect x="2" y="9" width="3" height="6" />
+                  <rect x="19" y="9" width="3" height="6" />
+                  <line x1="5" y1="12" x2="19" y2="12" /></svg
+                ><span>27 kg x caja</span></span
+              >
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
+                  <path d="M3 7v10l9 4 9-4V7" />
+                  <path d="M12 11v10" /></svg
+                ><span>2 piezas x caja</span></span
+              >
+            </div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
         <!-- =================== SECCION: PAREDES (incluye Mallas / Cristanac) =================== -->
         <!-- PRODUCTO 1 PAREDES -->
         <div
@@ -2525,112 +2643,6 @@
             <span class="product-cta">Ver más →</span>
           </div>
         </div>
-        <!-- PRODUCTO 16 PAREDES -->
-        <div
-          class="product-card anim-fade-up"
-          data-category="paredes"
-          data-subtype="mallas"
-          data-name="cristanac carnaval azul"
-          onclick="
-            openModal(
-              'Cristanac Carnaval Azul',
-              'Mallas 30×30',
-              'Segunda entrega/27.png',
-            )
-          "
-        >
-          <div class="product-img-wrap">
-            <img
-              class="product-img"
-              src="Segunda entrega/27.png"
-              alt="Cristanac Carnaval Azul"
-              loading="lazy"
-            />
-            <div class="product-overlay"></div>
-            <div class="product-shine"></div>
-          </div>
-          <div class="product-info">
-            <div class="product-name">Cristanac Carnaval Azul</div>
-            <div class="product-collection">Mallas 30×30</div>
-            <!-- EDITABLE: datos de caja (m2 / kg / piezas) -->
-            <div class="box-specs">
-              <span class="mini-spec-item"
-                ><svg viewBox="0 0 24 24">
-                  <rect x="3" y="3" width="18" height="18" rx="1" />
-                  <path d="M3 12h18M12 3v18" /></svg
-                ><span>1 m² x caja</span></span
-              >
-              <span class="mini-spec-item"
-                ><svg viewBox="0 0 24 24">
-                  <rect x="2" y="9" width="3" height="6" />
-                  <rect x="19" y="9" width="3" height="6" />
-                  <line x1="5" y1="12" x2="19" y2="12" /></svg
-                ><span>12 kg x caja</span></span
-              >
-              <span class="mini-spec-item"
-                ><svg viewBox="0 0 24 24">
-                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
-                  <path d="M3 7v10l9 4 9-4V7" />
-                  <path d="M12 11v10" /></svg
-                ><span>11 piezas x caja</span></span
-              >
-            </div>
-            <span class="product-cta">Ver más →</span>
-          </div>
-        </div>
-        <!-- PRODUCTO 17 PAREDES -->
-        <div
-          class="product-card anim-fade-up"
-          data-category="paredes"
-          data-subtype="mallas"
-          data-name="cristanac mrc cobalto"
-          onclick="
-            openModal(
-              'Cristanac MRC Cobalto',
-              'Mallas 30×30',
-              'Segunda entrega/28.png',
-            )
-          "
-        >
-          <div class="product-img-wrap">
-            <img
-              class="product-img"
-              src="Segunda entrega/28.png"
-              alt="Cristanac MRC Cobalto"
-              loading="lazy"
-            />
-            <div class="product-overlay"></div>
-            <div class="product-shine"></div>
-          </div>
-          <div class="product-info">
-            <div class="product-name">Cristanac MRC Cobalto</div>
-            <div class="product-collection">Mallas 30×30</div>
-            <!-- EDITABLE: datos de caja (m2 / kg / piezas) -->
-            <div class="box-specs">
-              <span class="mini-spec-item"
-                ><svg viewBox="0 0 24 24">
-                  <rect x="3" y="3" width="18" height="18" rx="1" />
-                  <path d="M3 12h18M12 3v18" /></svg
-                ><span>1 m² x caja</span></span
-              >
-              <span class="mini-spec-item"
-                ><svg viewBox="0 0 24 24">
-                  <rect x="2" y="9" width="3" height="6" />
-                  <rect x="19" y="9" width="3" height="6" />
-                  <line x1="5" y1="12" x2="19" y2="12" /></svg
-                ><span>12 kg x caja</span></span
-              >
-              <span class="mini-spec-item"
-                ><svg viewBox="0 0 24 24">
-                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
-                  <path d="M3 7v10l9 4 9-4V7" />
-                  <path d="M12 11v10" /></svg
-                ><span>11 piezas x caja</span></span
-              >
-            </div>
-            <span class="product-cta">Ver más →</span>
-          </div>
-        </div>
         <!-- PRODUCTO 18 PAREDES -->
         <div
           class="product-card anim-fade-up"
@@ -2763,59 +2775,6 @@
           </div>
           <div class="product-info">
             <div class="product-name">Cristanac Opal Blue</div>
-            <div class="product-collection">Mallas 30×30</div>
-            <!-- EDITABLE: datos de caja (m2 / kg / piezas) -->
-            <div class="box-specs">
-              <span class="mini-spec-item"
-                ><svg viewBox="0 0 24 24">
-                  <rect x="3" y="3" width="18" height="18" rx="1" />
-                  <path d="M3 12h18M12 3v18" /></svg
-                ><span>1 m² x caja</span></span
-              >
-              <span class="mini-spec-item"
-                ><svg viewBox="0 0 24 24">
-                  <rect x="2" y="9" width="3" height="6" />
-                  <rect x="19" y="9" width="3" height="6" />
-                  <line x1="5" y1="12" x2="19" y2="12" /></svg
-                ><span>12 kg x caja</span></span
-              >
-              <span class="mini-spec-item"
-                ><svg viewBox="0 0 24 24">
-                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
-                  <path d="M3 7v10l9 4 9-4V7" />
-                  <path d="M12 11v10" /></svg
-                ><span>11 piezas x caja</span></span
-              >
-            </div>
-            <span class="product-cta">Ver más →</span>
-          </div>
-        </div>
-        <!-- PRODUCTO 21 PAREDES -->
-        <div
-          class="product-card anim-fade-up"
-          data-category="paredes"
-          data-subtype="mallas"
-          data-name="cristanac carnaval naranja"
-          onclick="
-            openModal(
-              'Cristanac Carnaval Naranja',
-              'Mallas 30×30',
-              'Segunda entrega/32.png',
-            )
-          "
-        >
-          <div class="product-img-wrap">
-            <img
-              class="product-img"
-              src="Segunda entrega/32.png"
-              alt="Cristanac Carnaval Naranja"
-              loading="lazy"
-            />
-            <div class="product-overlay"></div>
-            <div class="product-shine"></div>
-          </div>
-          <div class="product-info">
-            <div class="product-name">Cristanac Carnaval Naranja</div>
             <div class="product-collection">Mallas 30×30</div>
             <!-- EDITABLE: datos de caja (m2 / kg / piezas) -->
             <div class="box-specs">
@@ -4576,6 +4535,427 @@
       </div>
     </section>
 
+    <!-- LAVAMANOS -->
+    <section id="lavamanos" style="margin-top: 80px">
+      <div class="section-header anim-fade-up">
+        <div>
+          <div class="section-eyebrow">Colección Premium · 2026</div>
+          <h2 class="section-title">LAVAM<em>ANOS</em></h2>
+          <div class="section-spec">Línea Premium</div>
+        </div>
+        <p class="section-desc">
+          Lavamanos y accesorios con acabados de primera calidad, diseñados para
+          complementar cada espacio con elegancia y durabilidad.
+        </p>
+      </div>
+
+      <div class="product-grid" id="lavamanosGrid">
+        <!-- =================== SECCION: LAVAMANOS =================== -->
+        <!-- PRODUCTO 1 LAVAMANOS -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="lavamanos"
+          data-name="Lavamanos ZT 8043 Alongado"
+          onclick="
+            openModal(
+              'Lavamanos ZT 8043 Alongado',
+              'Lavamanos Premium',
+              'Lavamanos/1.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Lavamanos/1.jpeg"
+              alt="Lavamanos ZT 8043 Alongado"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Lavamanos ZT 8043 Alongado</div>
+            <div class="product-collection">Lavamanos Premium</div>
+            <!-- EDITABLE: datos de caja (kg / piezas) -->
+            <div class="box-specs">
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <rect x="2" y="9" width="3" height="6" />
+                  <rect x="19" y="9" width="3" height="6" />
+                  <line x1="5" y1="12" x2="19" y2="12" /></svg
+                ><span>18 kg x caja</span></span
+              >
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
+                  <path d="M3 7v10l9 4 9-4V7" />
+                  <path d="M12 11v10" /></svg
+                ><span>1 pieza x caja</span></span
+              >
+            </div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 2 LAVAMANOS -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="lavamanos"
+          data-name="Lavamanos ZT 8022C"
+          onclick="
+            openModal(
+              'Lavamanos ZT 8022C',
+              'Lavamanos Premium',
+              'Lavamanos/2.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Lavamanos/2.jpeg"
+              alt="Lavamanos ZT 8022C"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Lavamanos ZT 8022C</div>
+            <div class="product-collection">Lavamanos Premium</div>
+            <!-- EDITABLE: datos de caja (kg / piezas) -->
+            <div class="box-specs">
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <rect x="2" y="9" width="3" height="6" />
+                  <rect x="19" y="9" width="3" height="6" />
+                  <line x1="5" y1="12" x2="19" y2="12" /></svg
+                ><span>18 kg x caja</span></span
+              >
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
+                  <path d="M3 7v10l9 4 9-4V7" />
+                  <path d="M12 11v10" /></svg
+                ><span>1 pieza x caja</span></span
+              >
+            </div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 3 LAVAMANOS -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="lavamanos"
+          data-name="Lavamanos ZT 3018A-R14"
+          onclick="
+            openModal(
+              'Lavamanos ZT 3018A-R14',
+              'Lavamanos Premium',
+              'Lavamanos/3.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Lavamanos/3.jpeg"
+              alt="Lavamanos ZT 3018A-R14"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Lavamanos ZT 3018A-R14</div>
+            <div class="product-collection">Lavamanos Premium</div>
+            <!-- EDITABLE: datos de caja (kg / piezas) -->
+            <div class="box-specs">
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <rect x="2" y="9" width="3" height="6" />
+                  <rect x="19" y="9" width="3" height="6" />
+                  <line x1="5" y1="12" x2="19" y2="12" /></svg
+                ><span>18 kg x caja</span></span
+              >
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
+                  <path d="M3 7v10l9 4 9-4V7" />
+                  <path d="M12 11v10" /></svg
+                ><span>1 pieza x caja</span></span
+              >
+            </div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 4 LAVAMANOS -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="lavamanos"
+          data-name="Lavamanos ZT 2023B"
+          onclick="
+            openModal(
+              'Lavamanos ZT 2023B',
+              'Lavamanos Premium',
+              'Lavamanos/4.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Lavamanos/4.jpeg"
+              alt="Lavamanos ZT 2023B"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Lavamanos ZT 2023B</div>
+            <div class="product-collection">Lavamanos Premium</div>
+            <!-- EDITABLE: datos de caja (kg / piezas) -->
+            <div class="box-specs">
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <rect x="2" y="9" width="3" height="6" />
+                  <rect x="19" y="9" width="3" height="6" />
+                  <line x1="5" y1="12" x2="19" y2="12" /></svg
+                ><span>18 kg x caja</span></span
+              >
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
+                  <path d="M3 7v10l9 4 9-4V7" />
+                  <path d="M12 11v10" /></svg
+                ><span>1 pieza x caja</span></span
+              >
+            </div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 5 LAVAMANOS -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="lavamanos"
+          data-name="Lavamanos ZT 3027"
+          onclick="
+            openModal(
+              'Lavamanos ZT 3027',
+              'Lavamanos Premium',
+              'Lavamanos/5.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Lavamanos/5.jpeg"
+              alt="Lavamanos ZT 3027"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Lavamanos ZT 3027</div>
+            <div class="product-collection">Lavamanos Premium</div>
+            <!-- EDITABLE: datos de caja (kg / piezas) -->
+            <div class="box-specs">
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <rect x="2" y="9" width="3" height="6" />
+                  <rect x="19" y="9" width="3" height="6" />
+                  <line x1="5" y1="12" x2="19" y2="12" /></svg
+                ><span>18 kg x caja</span></span
+              >
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
+                  <path d="M3 7v10l9 4 9-4V7" />
+                  <path d="M12 11v10" /></svg
+                ><span>1 pieza x caja</span></span
+              >
+            </div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 6 LAVAMANOS -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="lavamanos"
+          data-name="Lavamanos ZT 3017A-M2"
+          onclick="
+            openModal(
+              'Lavamanos ZT 3017A-M2',
+              'Lavamanos Premium',
+              'Lavamanos/6.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Lavamanos/6.jpeg"
+              alt="Lavamanos ZT 3017A-M2"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Lavamanos ZT 3017A-M2</div>
+            <div class="product-collection">Lavamanos Premium</div>
+            <!-- EDITABLE: datos de caja (kg / piezas) -->
+            <div class="box-specs">
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <rect x="2" y="9" width="3" height="6" />
+                  <rect x="19" y="9" width="3" height="6" />
+                  <line x1="5" y1="12" x2="19" y2="12" /></svg
+                ><span>18 kg x caja</span></span
+              >
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
+                  <path d="M3 7v10l9 4 9-4V7" />
+                  <path d="M12 11v10" /></svg
+                ><span>1 pieza x caja</span></span
+              >
+            </div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 7 LAVAMANOS -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="lavamanos"
+          data-name="Placa ZT ES50"
+          onclick="
+            openModal('Placa ZT ES50', 'Placa Sanitaria', 'Lavamanos/7.jpeg')
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Lavamanos/7.jpeg"
+              alt="Placa ZT ES50"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Placa ZT ES50</div>
+            <div class="product-collection">Placa Sanitaria</div>
+            <!-- EDITABLE: datos de caja (kg / piezas) -->
+            <div class="box-specs">
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <rect x="2" y="9" width="3" height="6" />
+                  <rect x="19" y="9" width="3" height="6" />
+                  <line x1="5" y1="12" x2="19" y2="12" /></svg
+                ><span>1 kg x caja</span></span
+              >
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
+                  <path d="M3 7v10l9 4 9-4V7" />
+                  <path d="M12 11v10" /></svg
+                ><span>1 pieza x caja</span></span
+              >
+            </div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 8 LAVAMANOS -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="lavamanos"
+          data-name="Placa ZT E50"
+          onclick="
+            openModal('Placa ZT E50', 'Placa Sanitaria', 'Lavamanos/8.jpeg')
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Lavamanos/8.jpeg"
+              alt="Placa ZT E50"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Placa ZT E50</div>
+            <div class="product-collection">Placa Sanitaria</div>
+            <!-- EDITABLE: datos de caja (kg / piezas) -->
+            <div class="box-specs">
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <rect x="2" y="9" width="3" height="6" />
+                  <rect x="19" y="9" width="3" height="6" />
+                  <line x1="5" y1="12" x2="19" y2="12" /></svg
+                ><span>1 kg x caja</span></span
+              >
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
+                  <path d="M3 7v10l9 4 9-4V7" />
+                  <path d="M12 11v10" /></svg
+                ><span>1 pieza x caja</span></span
+              >
+            </div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 9 LAVAMANOS -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="lavamanos"
+          data-name="Placa ZT ES60"
+          onclick="
+            openModal('Placa ZT ES60', 'Placa Sanitaria', 'Lavamanos/9.jpeg')
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Lavamanos/9.jpeg"
+              alt="Placa ZT ES60"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Placa ZT ES60</div>
+            <div class="product-collection">Placa Sanitaria</div>
+            <!-- EDITABLE: datos de caja (kg / piezas) -->
+            <div class="box-specs">
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <rect x="2" y="9" width="3" height="6" />
+                  <rect x="19" y="9" width="3" height="6" />
+                  <line x1="5" y1="12" x2="19" y2="12" /></svg
+                ><span>1 kg x caja</span></span
+              >
+              <span class="mini-spec-item"
+                ><svg viewBox="0 0 24 24">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z" />
+                  <path d="M3 7v10l9 4 9-4V7" />
+                  <path d="M12 11v10" /></svg
+                ><span>1 pieza x caja</span></span
+              >
+            </div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA BANNER -->
     <div class="cta-banner anim-fade-up" id="contacto">
       <div>
@@ -4741,21 +5121,31 @@
         const mainGrid = document.getElementById("allProductsGrid");
         const noResults = document.getElementById("noResults");
         const sanitariosSection = document.getElementById("sanitarios");
+        const lavamanosSection = document.getElementById("lavamanos");
 
         if (cat === "sanitarios") {
-          // Mostrar solo sanitarios, ocultar grid principal y mensaje de no resultados
+          // Mostrar solo sanitarios, ocultar el resto
           mainGrid.style.display = "none";
           noResults.style.display = "none";
           sanitariosSection.style.display = "";
+          lavamanosSection.style.display = "none";
+        } else if (cat === "lavamanos") {
+          // Mostrar solo lavamanos, ocultar el resto
+          mainGrid.style.display = "none";
+          noResults.style.display = "none";
+          lavamanosSection.style.display = "";
+          sanitariosSection.style.display = "none";
         } else if (cat === "todos") {
           // Mostrar todo
           mainGrid.style.display = "";
           sanitariosSection.style.display = "";
+          lavamanosSection.style.display = "";
           applyFilters();
         } else {
-          // Mostrar grid principal filtrado, ocultar sección sanitarios
+          // Mostrar grid principal filtrado, ocultar sanitarios y lavamanos
           mainGrid.style.display = "";
           sanitariosSection.style.display = "none";
+          lavamanosSection.style.display = "none";
           applyFilters();
         }
       }
@@ -4849,6 +5239,14 @@
       // ===== STAGGER sanitarios cards =====
       document
         .querySelectorAll("#sanitariosGrid .product-card")
+        .forEach((card, i) => {
+          card.style.transitionDelay = (i % 8) * 0.05 + "s";
+          observer.observe(card);
+        });
+
+      // ===== STAGGER lavamanos cards =====
+      document
+        .querySelectorAll("#lavamanosGrid .product-card")
         .forEach((card, i) => {
           card.style.transitionDelay = (i % 8) * 0.05 + "s";
           observer.observe(card);
@@ -4977,6 +5375,11 @@
             specs.innerHTML =
               makeSpec("ceramic", "Ceramica Vitrificada") +
               makeSpec("layers", "Linea Premium");
+          } else if (category === "lavamanos") {
+            specs.innerHTML =
+              makeSpec("ceramic", "Ceramica Vitrificada") +
+              makeSpec("seal", "Sellado 100%") +
+              makeSpec("slip", "Antideslizante");
           }
 
           if (specs.innerHTML) {
