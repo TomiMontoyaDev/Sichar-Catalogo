@@ -1006,8 +1006,9 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr repeat(3, 1fr);
+  grid-template-columns: minmax(230px, 0.8fr) minmax(0, 2fr) minmax(190px, 0.55fr);
   gap: 30px;
+  align-items: start;
 }
 
 .footer-logo {
@@ -1016,6 +1017,7 @@ footer {
 }
 
 .footer-brand-sub,
+.footer-section > h3,
 .footer-col h3 {
   margin: 8px 0 12px;
   color: var(--orange);
@@ -1023,6 +1025,61 @@ footer {
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.footer-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.footer-section > h3 {
+  grid-column: 1 / -1;
+  margin: 0 0 2px;
+}
+
+.footer-section .footer-col {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 0 10px 24px rgba(11, 11, 11, 0.05);
+}
+
+.footer-grid > .footer-col {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--white);
+}
+
+.footer-section .footer-col h4,
+.footer-grid > .footer-col h4 {
+  margin-bottom: 9px;
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.footer-section .footer-col p {
+  margin-bottom: 10px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.footer-section .footer-col a {
+  display: inline-flex;
+  width: fit-content;
+  margin: 4px 6px 0 0;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--orange-soft);
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .footer-col p,
@@ -1285,9 +1342,16 @@ footer {
 
   .featured-section,
   .section-header,
-  .footer-grid,
   .modal {
     grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .product-grid {
@@ -1370,6 +1434,26 @@ footer {
 
   footer {
     padding-inline: 18px;
+  }
+
+  .footer-section {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-section .footer-col {
+    padding: 15px;
+    border-radius: 16px;
+  }
+
+  .footer-section .footer-col a {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .footer-section .footer-col p,
+  .footer-grid > .footer-col a {
+    font-size: 12px;
   }
 
   .modal {
