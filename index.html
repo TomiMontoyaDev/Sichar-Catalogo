@@ -52,10 +52,15 @@
     </style>
   </head>
   <body>
+    <div class="site-shell" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+    </div>
     <!-- NAV -->
     <nav>
-      <img src="logo.png" alt="Sichar Logo" class="nav-logo-img" />
-      <div class="nav-logo">Si<span>char</span></div>
+      <a href="#hero" class="nav-brand" aria-label="Ir al inicio">
+        <img src="logo.png" alt="Sichar Logo" class="nav-logo-img" />
+        <div class="nav-logo">Si<span>char</span></div>
+      </a>
       <ul class="nav-links">
         <li><a href="#catalogo" onclick="navFilter('paredes')">Paredes</a></li>
         <li>
@@ -153,29 +158,44 @@
       <div class="hero-image" id="heroImg"></div>
       <div class="hero-fade"></div>
       <div class="hero-content">
+        <div class="hero-kicker">
+          <span>Catalogo vivo</span>
+          <strong>2026</strong>
+        </div>
         <div class="hero-logo">
           <img src="logo.png" alt="Logo" id="logo" class="logo" />
         </div>
-        <div class="hero-eyebrow">Colección 2026 · Acabados Premium</div>
+        <div class="hero-eyebrow">Blanco, negro y naranja #F86E1D</div>
         <h1 class="hero-title">
-          SICHAR
-          <span>Colombia</span>
+          Catálogo
+          <span>Sichar</span>
         </h1>
         <p class="hero-subtitle">
-          Porcelanato, cerámica sanitaria y revestimientos con acabados
-          seleccionados desde India, España y Brasil. Diseños que transforman
-          cada espacio en una experiencia de clase mundial.
+          Una vitrina más clara, rápida y visual para recorrer porcelanatos,
+          paredes, pisos, sanitarios y lavamanos con una estética blanca,
+          naranja y negra.
         </p>
+        <div class="hero-stats" aria-label="Resumen del catalogo">
+          <div><strong>90+</strong><span>referencias</span></div>
+          <div><strong>5</strong><span>lineas</span></div>
+          <div><strong>1</strong><span>asesor directo</span></div>
+        </div>
         <div class="hero-line"></div>
         <div class="hero-btns">
-          <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+          <a href="#catalogo" class="btn-primary">Explorar catálogo</a>
           <a
             href="https://wa.me/573117627309?text=%C2%A1Hola!%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20productos%20de%20Sichar."
             target="_blank"
             class="btn-outline"
-            >Contactar Asesor</a
+            >Hablar con asesor</a
           >
         </div>
+      </div>
+      <div class="hero-panel anim-zoom-in">
+        <span class="panel-label">Producto destacado</span>
+        <h2>Porcelanato Black Gold</h2>
+        <p>Brillo intenso, veta elegante y formato amplio para zonas sociales.</p>
+        <a href="#catalogo" onclick="navFilter('porcelanatos')">Ver linea</a>
       </div>
       <div class="hero-brand">
         Sichar
@@ -189,18 +209,17 @@
 
     <!-- FEATURED WOOD GEOMETRIC -->
     <section class="featured-wrapper" id="catalogo">
-      <div class="featured-section" style="padding: 0; margin: 0">
+      <div class="featured-section">
         <div class="featured-text anim-fade-left">
-          <div class="featured-eyebrow">Colección Especial 2026</div>
+          <div class="featured-eyebrow">Selección de apertura</div>
           <h2 class="featured-title">
-            Porcelanato
-            <em>mosaico terra</em>
-            sm001h
+            Texturas que
+            <em>encienden</em>
+            el espacio
           </h2>
           <p class="featured-desc">
-            Una propuesta innovadora que mezcla madera y geometría para crear
-            espacios únicos y con personalidad. Diseño moderno para interiores y
-            exteriores.
+            Una entrada más editorial para destacar productos, materiales y
+            formatos sin perder el acceso rápido al catálogo completo.
           </p>
           <div class="featured-divider"></div>
           <div class="featured-specs">
@@ -256,6 +275,7 @@
           </div>
         </div>
         <div class="featured-img anim-fade-right">
+          <span class="image-badge">SM001H</span>
           <img
             src="Primera entrega/29.png"
             alt="Wood Geometric Design"
@@ -266,7 +286,15 @@
     </section>
 
     <!-- FILTER + SEARCH ZONE -->
-    <section style="margin-top: 100px">
+    <section class="catalog-section">
+      <div class="catalog-heading anim-fade-up">
+        <span>Explora por categoria</span>
+        <h2>Catalogo Sichar</h2>
+        <p>
+          Filtra por linea o usa el buscador superior para llegar rapido a la
+          referencia que necesitas.
+        </p>
+      </div>
       <div class="filter-bar">
         <button class="filter-btn active" onclick="setFilter('todos', this)">
           Todos
