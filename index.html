@@ -79,7 +79,26 @@
         <li>
           <a href="#catalogo" onclick="navFilter('lavamanos')">Lavamanos</a>
         </li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li>
+          <a
+            href="#accesoriosbanio"
+            onclick="
+              navToSection('accesoriosbanio');
+              return false;
+            "
+            >Accesorios Baño</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contacto"
+            onclick="
+              navToSection('contacto');
+              return false;
+            "
+            >Contacto</a
+          >
+        </li>
       </ul>
       <div class="nav-search">
         <input
@@ -150,7 +169,22 @@
         "
         >Lavamanos</a
       >
-      <a href="#contacto" onclick="closeDrawer()">Contacto</a>
+      <a
+        href="#accesoriosbanio"
+        onclick="
+          navToSection('accesoriosbanio');
+          return false;
+        "
+        >Accesorios Baño</a
+      >
+      <a
+        href="#contacto"
+        onclick="
+          navToSection('contacto');
+          return false;
+        "
+        >Contacto</a
+      >
       <div class="drawer-search">
         <input
           type="text"
@@ -6438,6 +6472,227 @@
       </div>
     </section>
 
+    <!-- ACCESORIOS BAÑO -->
+    <section id="accesoriosbanio" style="margin-top: 80px">
+      <div class="section-header anim-fade-up">
+        <div>
+          <div class="section-eyebrow">Colección Premium · 2026</div>
+          <h2 class="section-title">ACCESORIOS <em>BAÑO</em></h2>
+          <div class="section-spec">Línea Premium</div>
+        </div>
+        <p class="section-desc">
+          Accesorios de baño con acabados cromados y negro mate, diseñados para
+          complementar cada espacio con elegancia y durabilidad.
+        </p>
+      </div>
+
+      <div class="product-grid" id="accesoriosBanioGrid">
+        <!-- PRODUCTO 1 -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="accesoriosbanio"
+          data-name="Ref 101 Cromado"
+          onclick="
+            openModal(
+              'Ref 101 Cromado',
+              'Accesorios Baño',
+              'Accesorios Banio/Ref 101 Cromado.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Accesorios Banio/Ref 101 Cromado.jpeg"
+              alt="Ref 101 Cromado"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Ref 101 Cromado</div>
+            <div class="product-collection">Accesorios Baño</div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 2 -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="accesoriosbanio"
+          data-name="Ref 101B Negro Mate"
+          onclick="
+            openModal(
+              'Ref 101B Negro Mate',
+              'Accesorios Baño',
+              'Accesorios Banio/Ref 101B Negro Mate.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Accesorios Banio/Ref 101B Negro Mate.jpeg"
+              alt="Ref 101B Negro Mate"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Ref 101B Negro Mate</div>
+            <div class="product-collection">Accesorios Baño</div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 3 -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="accesoriosbanio"
+          data-name="Ref 119 Cromado"
+          onclick="
+            openModal(
+              'Ref 119 Cromado',
+              'Accesorios Baño',
+              'Accesorios Banio/Ref 119 Cromado.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Accesorios Banio/Ref 119 Cromado.jpeg"
+              alt="Ref 119 Cromado"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Ref 119 Cromado</div>
+            <div class="product-collection">Accesorios Baño</div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 4 -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="accesoriosbanio"
+          data-name="Ref 120 Cromado"
+          onclick="
+            openModal(
+              'Ref 120 Cromado',
+              'Accesorios Baño',
+              'Accesorios Banio/Ref 120 Cromado.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Accesorios Banio/Ref 120 Cromado.jpeg"
+              alt="Ref 120 Cromado"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Ref 120 Cromado</div>
+            <div class="product-collection">Accesorios Baño</div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 5 -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="accesoriosbanio"
+          data-name="Ref 125 Cromado"
+          onclick="
+            openModal(
+              'Ref 125 Cromado',
+              'Accesorios Baño',
+              'Accesorios Banio/Ref 125 Cromado.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Accesorios Banio/Ref 125 Cromado.jpeg"
+              alt="Ref 125 Cromado"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Ref 125 Cromado</div>
+            <div class="product-collection">Accesorios Baño</div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 6 -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="accesoriosbanio"
+          data-name="Ref 134 Cromado"
+          onclick="
+            openModal(
+              'Ref 134 Cromado',
+              'Accesorios Baño',
+              'Accesorios Banio/Ref 134 Cromado.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Accesorios Banio/Ref 134 Cromado.jpeg"
+              alt="Ref 134 Cromado"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Ref 134 Cromado</div>
+            <div class="product-collection">Accesorios Baño</div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+        <!-- PRODUCTO 7 -->
+        <div
+          class="product-card anim-fade-up"
+          data-category="accesoriosbanio"
+          data-name="Ref 134B Negro Mate"
+          onclick="
+            openModal(
+              'Ref 134B Negro Mate',
+              'Accesorios Baño',
+              'Accesorios Banio/Ref 134B Negro Mate.jpeg',
+            )
+          "
+        >
+          <div class="product-img-wrap">
+            <img
+              class="product-img"
+              src="Accesorios Banio/Ref 134B Negro Mate.jpeg"
+              alt="Ref 134B Negro Mate"
+              loading="lazy"
+            />
+            <div class="product-overlay"></div>
+            <div class="product-shine"></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Ref 134B Negro Mate</div>
+            <div class="product-collection">Accesorios Baño</div>
+            <span class="product-cta">Ver más →</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA BANNER -->
     <div class="cta-banner anim-fade-up" id="contacto">
       <div>
@@ -6783,6 +7038,14 @@
           observer.observe(card);
         });
 
+      // ===== STAGGER accesorios baño cards =====
+      document
+        .querySelectorAll("#accesoriosBanioGrid .product-card")
+        .forEach((card, i) => {
+          card.style.transitionDelay = (i % 8) * 0.05 + "s";
+          observer.observe(card);
+        });
+
       // ===== NAV FILTER (desde navbar) =====
       function navFilter(cat) {
         // Buscar el botón correspondiente y activar el filtro
@@ -6811,6 +7074,18 @@
         woodImgEl.style.backgroundSize = "cover";
         woodImgEl.style.backgroundPosition = "center";
       }
+      // ===== SCROLL DIRECTO A SECCION (Accesorios Baño / Contacto) =====
+      function navToSection(id) {
+        closeDrawer();
+        setTimeout(() => {
+          const el = document.getElementById(id);
+          if (!el) return;
+          const offset =
+            el.getBoundingClientRect().top + window.pageYOffset - 90;
+          window.scrollTo({ top: offset, behavior: "smooth" });
+        }, 60);
+      }
+
       // ===== MOBILE DRAWER =====
       function toggleDrawer() {
         const btn = document.getElementById("navHamburger");
@@ -6870,11 +7145,14 @@
           var sizeMatch = collectionText.match(/(\d{2}\u00d7\d{2})/);
           var realSize = sizeMatch ? sizeMatch[1] + " cm" : null;
 
+          var nameText = (card.dataset.name || "") + " " + collectionText;
+          var isMate = /mate/i.test(nameText);
+
           if (category === "porcelanatos") {
             specs.innerHTML =
               makeSpec("size", realSize || "60x120 cm") +
               makeSpec("layers", "Acabado Premium") +
-              makeSpec("slip", "Antideslizante") +
+              (isMate ? makeSpec("slip", "Antideslizante") : "") +
               makeSpec("seal", "Sellado 100%") +
               makeSpec("floor", "Piso / Pared");
           } else if (
@@ -6899,7 +7177,7 @@
             specs.innerHTML =
               makeSpec("size", realSize || "45x45 cm") +
               makeSpec("layers", "Acabado Mate") +
-              makeSpec("slip", "Antideslizante") +
+              (isMate ? makeSpec("slip", "Antideslizante") : "") +
               makeSpec("seal", "Sellado 100%") +
               makeSpec("floor", "Piso");
           } else if (category === "cenefas") {
